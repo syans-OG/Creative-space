@@ -247,13 +247,15 @@ a {
     text-transform: uppercase;
 }
 
+/* RESPONSIVE: Fluid typography for better mobile scaling */
 .pleased-to-meet-you-VLhK4q {
     font-family: var(--font-body);
-    font-size: 22px;
+    font-size: clamp(16px, 4vw, 22px);
     line-height: 1.5;
     max-width: 900px;
     /* Increased from 700px */
     margin: 0 auto 48px;
+    padding: 0 16px;
 }
 
 /* Stats Boxes - Positioned at sides */
@@ -273,10 +275,11 @@ a {
     gap: 24px;
 }
 
+/* RESPONSIVE: Flexible stats boxes */
 .rectangle-1-ZuBCzc,
 .rectangle-2-AVvs05 {
-    width: 98px;
-    height: 98px;
+    width: clamp(70px, 15vw, 98px);
+    height: clamp(70px, 15vw, 98px);
     background-color: var(--color-dark);
     border-radius: 20px;
     display: flex;
@@ -286,10 +289,11 @@ a {
     position: relative;
 }
 
+/* RESPONSIVE: Fluid stats numbers */
 .x5-ZuBCzc,
 .x1-AVvs05 {
     font-family: var(--font-display);
-    font-size: 40px;
+    font-size: clamp(28px, 6vw, 40px);
     color: var(--color-white);
     position: absolute;
     left: 50%;
@@ -299,10 +303,11 @@ a {
 }
 
 
+/* RESPONSIVE: Fluid stats labels */
 .projects-completed-ZuBCzc,
 .yearsof-experience-AVvs05 {
     font-family: var(--font-heading);
-    font-size: 22px;
+    font-size: clamp(16px, 4vw, 22px);
     line-height: 1.3;
     max-width: 140px;
 }
@@ -324,14 +329,20 @@ a {
     align-items: center;
 }
 
+/* RESPONSIVE: Flexible about image container */
 .rectangle-3-V8UxFv {
     flex-shrink: 0;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 
+/* RESPONSIVE: Flexible about image height */
 .rectangle-3-eSjKYj {
     width: 100%;
-    height: 550px;
+    height: auto;
+    min-height: 400px;
+    max-height: 550px;
+    aspect-ratio: 4/5;
     background-color: var(--color-dark);
     border-radius: 50px;
     object-fit: cover;
@@ -344,9 +355,10 @@ a {
     gap: 24px;
 }
 
+/* RESPONSIVE: Fluid about heading */
 .syakib-18-year-old-MQDdrh {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: clamp(24px, 5vw, 32px);
     line-height: 1.3;
     margin: 0;
 }
@@ -365,9 +377,10 @@ a {
     line-height: 1.2;
 }
 
+/* RESPONSIVE: Fluid about body text */
 .my-name-is-syakib-bu-MQDdrh {
     font-family: var(--font-body);
-    font-size: 16px;
+    font-size: clamp(14px, 3vw, 16px);
     line-height: 1.6;
     margin: 0;
     white-space: normal;
@@ -395,10 +408,11 @@ a {
     text-transform: uppercase;
 }
 
+/* RESPONSIVE: Auto-fit grid for featured projects */
 .frame-3-Nn5OeD {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(24px, 5vw, 48px);
 }
 
 .group-4-IlxfIo,
@@ -426,18 +440,20 @@ a {
     margin-bottom: 16px;
 }
 
+/* RESPONSIVE: Fluid project titles */
 .title-kXDzSf,
 .title-B9WLMy,
 .title-jxQTMH {
     font-family: var(--font-heading);
-    font-size: 24px;
+    font-size: clamp(20px, 4vw, 24px);
     margin: 16px 0 8px;
     text-align: left;
 }
 
+/* RESPONSIVE: Fluid project descriptions */
 .lorem-ipsum-dolor-si {
     font-family: var(--font-body);
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
     line-height: 1.5;
     text-align: left;
     color: #666;
@@ -482,11 +498,13 @@ a {
     color: var(--color-accent);
 }
 
-/* Circular Projects Container */
+/* RESPONSIVE: Circular Projects Container - Prevent overflow */
 .circular-projects {
     position: relative;
-    width: 900px;
-    height: 900px;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    aspect-ratio: 1;
     margin: 0 auto;
 }
 
@@ -736,10 +754,10 @@ a {
    RESPONSIVE DESIGN
    =================================== */
 
-/* Tablet & Mobile Navigation */
+/* RESPONSIVE: Tablet breakpoint - Enhanced */
 @media (max-width: 1024px) {
     .navigasi-xl4bh6 {
-        padding: 0 24px;
+        padding: 0 clamp(16px, 4vw, 24px);
     }
 
     /* Mobile Hamburger Trigger */
@@ -782,7 +800,7 @@ a {
     .menu-item-XtMdu3,
     .menu-item-4DfsaV,
     .menu-item-Cywxh7 {
-        font-size: 32px;
+        font-size: clamp(24px, 6vw, 32px);
         /* Larger tap targets */
         font-family: var(--font-display);
         padding: 24px;
@@ -790,13 +808,14 @@ a {
         text-align: center;
     }
 
+    /* RESPONSIVE: Flexible section padding */
     .page-1-welcome-xl4bh6,
     .page-2-about-xl4bh6,
     .page-3-featured-work-xl4bh6,
     .page-4-see-more-project-xl4bh6,
     .page-5-contact-xl4bh6 {
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: clamp(16px, 4vw, 24px);
+        padding-right: clamp(16px, 4vw, 24px);
         /* Prevent overflow issues */
         width: 100%;
         max-width: 100vw;
@@ -813,18 +832,27 @@ a {
     }
 
     .frame-3-Nn5OeD {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
     /* Circular projects responsive */
     .circular-projects {
-        width: 600px;
-        height: 600px;
-        max-width: 100%;
-        aspect-ratio: 1;
+        max-width: 600px;
+    }
+
+    /* RESPONSIVE: Reduce hero padding on tablet */
+    .page-1-welcome-xl4bh6 {
+        padding-top: 140px;
+        padding-bottom: 64px;
+    }
+
+    /* RESPONSIVE: Projects header padding */
+    .projects-header-section {
+        padding: 140px clamp(24px, 5vw, 48px) 48px;
     }
 }
 
+/* RESPONSIVE: Mobile breakpoint - Enhanced */
 @media (max-width: 768px) {
     .frame-2-VLhK4q {
         flex-direction: column;
@@ -838,10 +866,7 @@ a {
 
     /* Circular projects mobile */
     .circular-projects {
-        width: 100%;
         max-width: 350px;
-        aspect-ratio: 1;
-        height: auto;
     }
 
     .project-card {
@@ -856,8 +881,66 @@ a {
 
     /* Contact Section adjustments */
     .rectangle-27-ojgVmk {
-        padding: 32px 24px;
+        padding: clamp(24px, 6vw, 32px);
         min-height: auto;
+    }
+
+    /* RESPONSIVE: Reduce hero padding on mobile */
+    .page-1-welcome-xl4bh6 {
+        padding-top: 120px;
+        padding-bottom: 48px;
+        min-height: 100svh;
+    }
+
+    /* RESPONSIVE: Projects header mobile */
+    .projects-header-section {
+        padding-top: 120px;
+        padding-bottom: 32px;
+    }
+
+    /* RESPONSIVE: Project detail mobile */
+    .project-detail-container {
+        padding: 120px clamp(20px, 5vw, 48px) 48px;
+    }
+
+    .project-gallery-container {
+        padding: 0 clamp(20px, 5vw, 48px);
+        gap: clamp(24px, 6vw, 48px);
+    }
+}
+
+/* RESPONSIVE: Extra small mobile breakpoint - For small phones */
+@media (max-width: 480px) {
+
+    /* Further reduce circular projects */
+    .circular-projects {
+        max-width: 280px;
+    }
+
+    .project-card {
+        width: 80px;
+        height: 80px;
+    }
+
+    .project-item {
+        margin-left: -40px;
+        margin-top: -40px;
+    }
+
+    /* Optimize padding for very small screens */
+    .page-1-welcome-xl4bh6,
+    .page-2-about-xl4bh6,
+    .page-3-featured-work-xl4bh6,
+    .page-4-see-more-project-xl4bh6,
+    .page-5-contact-xl4bh6 {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Ensure minimum readable font sizes */
+    .pleased-to-meet-you-VLhK4q,
+    .my-name-is-syakib-bu-MQDdrh {
+        font-size: 14px;
     }
 }
 
@@ -935,9 +1018,10 @@ a {
     margin-bottom: 24px;
 }
 
+/* RESPONSIVE: Fluid "you need" text */
 .you-need-text {
     font-family: var(--font-display);
-    font-size: 48px;
+    font-size: clamp(32px, 8vw, 48px);
     /* Decreased from 80px */
     line-height: 1.1;
     text-transform: uppercase;
@@ -950,18 +1034,20 @@ a {
     gap: 16px;
 }
 
+/* RESPONSIVE: Fluid projects page category text */
 .project-switcher-text {
     font-family: var(--font-display);
-    font-size: 96px;
+    font-size: clamp(48px, 12vw, 96px);
     /* Significantly larger */
     line-height: 1;
     text-transform: uppercase;
     color: var(--color-dark);
 }
 
+/* RESPONSIVE: Fluid projects subtitle */
 .projects-subtitle {
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: clamp(16px, 3.5vw, 18px);
     line-height: 1.6;
     max-width: 700px;
     margin: 0;
@@ -969,13 +1055,14 @@ a {
     color: var(--color-dark);
 }
 
+/* RESPONSIVE: Auto-fit grid for projects page */
 .projects-grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(24px, 4vw, 32px);
     max-width: 1200px;
     margin: 48px auto 96px;
-    padding: 0 48px;
+    padding: 0 clamp(24px, 5vw, 48px);
     min-height: 600px;
     /* Prevent collapse when filtering */
     align-items: start;
@@ -1007,9 +1094,10 @@ a {
     margin-bottom: 8px;
 }
 
+/* RESPONSIVE: Fluid project grid title */
 .project-grid-title {
     font-family: var(--font-heading);
-    font-size: 24px;
+    font-size: clamp(20px, 4vw, 24px);
     margin: 0;
     line-height: 1.2;
 }
@@ -1154,6 +1242,48 @@ a {
     }
 }
 
+/* RESPONSIVE: Mobile-safe animations - Reduced distances */
+@media (max-width: 640px) {
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+            /* Reduced from 30px */
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes scaleIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+            /* Reduced from 0.9 */
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes fadeViewIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+            /* Reduced from 20px */
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
 /* Animation Utilities */
 .animate-on-scroll {
     opacity: 0;
@@ -1283,18 +1413,20 @@ a {
     margin: 0 auto;
 }
 
+/* RESPONSIVE: Fluid project detail title */
 .project-title-large {
     font-family: var(--font-display);
-    font-size: 80px;
+    font-size: clamp(40px, 10vw, 80px);
     line-height: 1;
     text-transform: uppercase;
     color: var(--color-dark);
     margin-bottom: 8px;
 }
 
+/* RESPONSIVE: Fluid project category */
 .project-category-small {
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: clamp(16px, 3.5vw, 18px);
     color: var(--color-dark);
     margin-bottom: 80px;
     opacity: 0.8;
@@ -1318,17 +1450,19 @@ a {
     margin-bottom: 32px;
 }
 
+/* RESPONSIVE: Fluid info label */
 .info-label {
     font-family: var(--font-heading);
-    font-size: 20px;
+    font-size: clamp(18px, 3.5vw, 20px);
     text-transform: uppercase;
     margin-bottom: 16px;
     letter-spacing: 0.05em;
 }
 
+/* RESPONSIVE: Fluid info text */
 .info-text {
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: clamp(16px, 3.5vw, 18px);
     line-height: 1.6;
     max-width: 600px;
 }
@@ -1339,9 +1473,10 @@ a {
     margin: 0;
 }
 
+/* RESPONSIVE: Fluid info list items */
 .info-list li {
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: clamp(16px, 3.5vw, 18px);
     line-height: 1.6;
     margin-bottom: 8px;
     position: relative;
@@ -1364,9 +1499,13 @@ a {
     gap: 48px;
 }
 
+/* RESPONSIVE: Flexible gallery image height */
 .gallery-image-large {
     width: 100%;
-    height: 600px;
+    height: auto;
+    min-height: 300px;
+    max-height: 600px;
+    aspect-ratio: 2/1;
     background-color: #d9d9d9;
     /* background-image: url('https://placehold.co/1200x600/d9d9d9/a3a3a3?text=Project+Shot'); */
     background-size: cover;
