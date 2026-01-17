@@ -1,18 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/Creative-space/">
-    <title>Syans - Creative Space</title>
+    <!-- <title>Syans - Creative Space | Developer</title> -->
+    <meta name="description"
+        content="Portfolio Syakib (Syans) - UI/UX Designer dan Creative Developer. Spesialisasi dalam desain antarmuka, pengembangan web, dan pengalaman digital interaktif.">
+    <meta name="keywords"
+        content="UI/UX Designer, Web Developer, Portfolio, Syans, Syakib, Creative Developer, Indonesia">
+    <meta name="author" content="Syakib (Syans)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://syans-og.github.io/Creative-space/">
+    <meta property="og:title" content="Syans - Creative Space">
+    <meta property="og:description"
+        content="UI/UX Designer dan Creative Developer. Membangun pengalaman digital yang menarik dan interaktif.">
+    <meta property="og:image" content="asset/logo.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Syans - Creative Space">
+    <meta name="twitter:description"
+        content="UI/UX Designer dan Creative Developer. Membangun pengalaman digital yang menarik dan interaktif.">
+    <meta name="twitter:image" content="asset/logo.png">
+
+    <link rel="icon" href="asset/logo.png" type="image/png">
+    <meta name="theme-color" content="#161412">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
+
 <body>
-    <!-- BACKGROUND LAYERS -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-text">CREATIVE SPACE</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <div id="bgA" class="bg-layer active"></div>
     <div id="bgB" class="bg-layer inactive"></div>
+    <div class="noise-overlay"></div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
 
     <div class="home">
         <div class="navigasi-xl4bh6">
@@ -40,12 +74,17 @@
                                 Featured</div>
                         </article>
                     </a>
-                    <a href="/?view=home#see-more" data-link id="nav-projects-link">
+                    <a href="/?view=projects" data-link id="nav-projects-link">
                         <article class="menu-item-Cywxh7">
                             <div class="menu-item-a0CkcZ arial-bold-licorice-16px">Projects</div>
                         </article>
                     </a>
                     <div class="mobile-nav-contact">
+                        <a href="#rectangle-27" data-link>
+                            <article class="menu-item-Cywxh7">
+                                <div class="menu-item-a0CkcZ arial-bold-licorice-16px">Contact</div>
+                            </article>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -64,7 +103,8 @@
 
                 <div class="page-1-welcome-xl4bh6" id="page-1-welcome" data-bg="#f3f1ec" data-text="dark">
                     <div class="welcome-to-my-VLhK4q animate-on-scroll fade-up delay-100">welcome to my</div>
-                    <h1 class="title-VLhK4q title animate-on-scroll fade-up delay-200">creative space</h1>
+                    <h1 class="title-VLhK4q title animate-on-scroll fade-up delay-200" data-anim-processed="true"
+                        style="opacity: 1;">creative <br class="mobile-break"> space</h1>
                     <p class="pleased-to-meet-you-VLhK4q animate-on-scroll fade-up delay-300">Pleased to meet you, I'm
                         Syans a
                         UI/UX enthusiast and creative
@@ -130,11 +170,119 @@
                         </div>
                     </div>
 
+                    <div class="toolbox-section animate-on-scroll fade-in delay-200">
+                        <div class="marquee-wrapper">
+                            <div class="marquee-content">
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/figma.svg" alt="Figma Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/photoshop.svg" alt="Photoshop Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://cdn.simpleicons.org/android" alt="Android Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/flutter.svg" alt="Flutter Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/html5.svg" alt="HTML5 Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/java.svg" alt="Java Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/css_old.svg" alt="CSS3 Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/github_light.svg" alt="GitHub Logo">
+                                </div>
+
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/figma.svg" alt="Figma Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/photoshop.svg" alt="Photoshop Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://cdn.simpleicons.org/android" alt="Android Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/flutter.svg" alt="Flutter Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/html5.svg" alt="HTML5 Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/java.svg" alt="Java Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/css_old.svg" alt="CSS3 Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/github_light.svg" alt="GitHub Logo">
+                                </div>
+
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/figma.svg" alt="Figma Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/photoshop.svg" alt="Photoshop Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://cdn.simpleicons.org/android" alt="Android Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/flutter.svg" alt="Flutter Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/html5.svg" alt="HTML5 Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/java.svg" alt="Java Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/css_old.svg" alt="CSS3 Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/github_light.svg" alt="GitHub Logo">
+                                </div>
+
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/figma.svg" alt="Figma Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/photoshop.svg" alt="Photoshop Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://cdn.simpleicons.org/android" alt="Android Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/flutter.svg" alt="Flutter Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/html5.svg" alt="HTML5 Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/java.svg" alt="Java Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/css_old.svg" alt="CSS3 Logo">
+                                </div>
+                                <div class="tool-item">
+                                    <img src="https://svgl.app/library/github_light.svg" alt="GitHub Logo">
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="page-3-featured-work-xl4bh6" id="projects" data-bg="#f3f1ec" data-text="dark">
-                        <h2 class="featured-work-Nn5OeD section-title animate-on-scroll fade-up">featured projects</h2>
+                        <h2 class="featured-work-Nn5OeD section-title animate-on-scroll fade-up"
+                            data-anim-processed="true" style="opacity: 1;">featured projects</h2>
                         <div class="featured-carousel-container animate-on-scroll fade-up">
                             <div class="featured-carousel-wrapper" id="featured-carousel">
-                                <!-- Projects will be dynamically inserted here -->
                             </div>
                             <div class="carousel-progress-container">
                                 <div class="carousel-progress-bar"></div>
@@ -228,8 +376,14 @@
                 <div class="project-gallery-container animate-on-scroll fade-up delay-200" id="detail-gallery">
                 </div>
 
-                <div style="padding: 100px 0; text-align: center;">
-                    <a href="/?view=projects" data-link class="menu-item-ojgVmk hover-scale">
+                <section class="more-projects-section animate-on-scroll fade-up">
+                    <h2 data-anim-processed="true" style="opacity: 1;">more projects</h2>
+                    <div class="more-projects-grid" id="more-projects-grid">
+                    </div>
+                </section>
+
+                <div style="padding: 60px 0; text-align: center;">
+                    <a href="/?view=projects" data-link class="menu-item-ojgVmk hover-scale no-anim">
                         <span class="menu-item-00iG10">BACK TO PROJECTS</span>
                     </a>
                 </div>
@@ -281,10 +435,26 @@
         </footer>
     </div>
 
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+
+    <div id="image-lightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+        <img id="lightbox-image" src="" alt="Zoomed Image">
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
     <script src="project-data.js"></script>
+    <script src="animation.js"></script>
     <script src="main.js"></script>
 </body>
-
 
 
 </html>
