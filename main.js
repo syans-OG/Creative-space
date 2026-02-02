@@ -745,6 +745,16 @@ document.addEventListener('DOMContentLoaded', function () {
         startAutoSlide();
         observeAnimations();
         initScrollTheme();
+        initProjectCount();
+    }
+
+    function initProjectCount() {
+        if (typeof projectsData === 'undefined') return;
+        const countElement = document.getElementById('total-projects-count');
+        if (countElement) {
+            const count = Object.keys(projectsData).length;
+            countElement.textContent = count;
+        }
     }
 
     function initScrollTheme() {
