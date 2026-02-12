@@ -6,8 +6,8 @@ const projectsData = {
         cardColor: "#040404a8",
         roles: ["3D Web Developer", "UI/UX Designer", "Frontend Developer", "Motion Designer"],
         deliverables: ["3D Product Visualization", "Scroll-Based Animation System", "Interactive 3D Experience", "Responsive Web Design", "Technical Specifications UI", "Frontend Implementation (Next.js + React Three Fiber)"],
-        thumbnail: "asset/luminaX/luminaX_thumbnail.png",
-        featuredThumbnail: "asset/luminaX/luminaX_thumbnail2.png",
+        thumbnail: "asset/luminax/luminax_thumbnail.png",
+        featuredThumbnail: "asset/luminax/luminax_thumbnail2.png",
         images: [
             "asset/luminax/luminax.png",
             "asset/luminax/luminax1.png",
